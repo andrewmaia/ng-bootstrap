@@ -3,14 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ng-bootstrap": {
+    "ng-bootstrap2": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
-        },
-        "@schematics/angular:application": {
-          "strict": true
         }
       },
       "root": "",
@@ -20,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ng-bootstrap",
+            "outputPath": "dist/ng-bootstrap2",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ng-bootstrap:build:production"
+              "browserTarget": "ng-bootstrap2:build:production"
             },
             "development": {
-              "browserTarget": "ng-bootstrap:build:development"
+              "browserTarget": "ng-bootstrap2:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ng-bootstrap:build"
+            "browserTarget": "ng-bootstrap2:build"
           }
         },
         "test": {
@@ -106,6 +103,5 @@
         }
       }
     }
-  },
-  "defaultProject": "ng-bootstrap"
+  }
 }
