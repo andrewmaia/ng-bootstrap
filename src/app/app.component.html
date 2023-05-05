@@ -1,5 +1,28 @@
-<p>
+  Alert
   <ngb-alert type="success">Você pode me fechar</ngb-alert>
   <ngb-alert type="success" [dismissible]="false">Você não pode me fechar</ngb-alert>
-  
-</p>
+  <br/>  
+  Carousel
+  <ngb-carousel style="width:fit-content">
+    <ng-template ngbSlide>
+      <div >      
+        <img src="https://picsum.photos/id/944/900/500"/>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div>      
+        <img src="https://picsum.photos/id/1011/900/500" />
+      </div>
+  </ng-template>    
+  </ngb-carousel>
+  <br/>  
+  Collapse  
+  <br/>
+	<button	type="button" class="btn btn-outline-primary"	(click)="collapse.toggle()">
+		Recolher
+	</button>
+  <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+      <div >Conteudo a ser recolhido</div>
+  </div>
+
+
