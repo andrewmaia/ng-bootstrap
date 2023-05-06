@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 	public isCollapsed = false;
-
+  constructor(private modalService: NgbModal) {}
+	open(content:any) {
+		this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' });
+	}
 }
