@@ -1,59 +1,77 @@
-  Alert
-  <ngb-alert type="success">Você pode me fechar</ngb-alert>
-  <ngb-alert type="success" [dismissible]="false">Você não pode me fechar</ngb-alert>
-  <br/>  
-  Carousel
-  <ngb-carousel style="width:fit-content">
-    <ng-template ngbSlide>
-      <div >      
-        <img src="https://picsum.photos/id/944/900/500"/>
-      </div>
-    </ng-template>
-    <ng-template ngbSlide>
-      <div>      
-        <img src="https://picsum.photos/id/1011/900/500" />
-      </div>
-  </ng-template>    
-  </ngb-carousel>
-  <br/>  
-  Collapse  
-  <br/>
-	<button	type="button" class="btn btn-outline-primary"	(click)="collapse.toggle()">
-		Recolher
-	</button>
-  <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
-      <div >Conteudo a ser recolhido</div>
-  </div>
-  <br/>  
-  Datepicker  
-  <br/>
-  <ngb-datepicker #d></ngb-datepicker>
-  <br/>  
-  Dropdown
-  <br/>
-  <div ngbDropdown class="d-inline-block">
-    <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
-      Abrir Dropdown
-    </button>
-    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-      <button ngbDropdownItem>Item 1</button>
-      <button ngbDropdownItem>Item 2</button>
-      <button ngbDropdownItem>Item 3</button>
-    </div>
-  </div>  
-  <br/>  
-  Modal
-  <br/>
-  <ng-template #content let-modal>
-    <div class="modal-header">
-      <h4 class="modal-title" id="modal-basic-title">Modal</h4>
-      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
-    </div>
-    <div class="modal-body">
-        Conteúdo Modal
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Salvar</button>
+Alert
+<ngb-alert type="success">Você pode me fechar</ngb-alert>
+<ngb-alert type="success" [dismissible]="false">Você não pode me fechar</ngb-alert>
+<br/>  
+Carousel
+<ngb-carousel style="width:fit-content">
+  <ng-template ngbSlide>
+    <div >      
+      <img src="https://picsum.photos/id/944/900/500"/>
     </div>
   </ng-template>
-  <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Abrir Modal</button>    
+  <ng-template ngbSlide>
+    <div>      
+      <img src="https://picsum.photos/id/1011/900/500" />
+    </div>
+</ng-template>    
+</ngb-carousel>
+<br/>  
+Collapse  
+<br/>
+<button	type="button" class="btn btn-outline-primary"	(click)="collapse.toggle()">
+  Recolher
+</button>
+<div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+    <div >Conteudo a ser recolhido</div>
+</div>
+<br/>  
+Datepicker  
+<br/>
+<ngb-datepicker #d></ngb-datepicker>
+<br/>  
+Dropdown
+<br/>
+<div ngbDropdown class="d-inline-block">
+  <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+    Abrir Dropdown
+  </button>
+  <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+    <button ngbDropdownItem>Item 1</button>
+    <button ngbDropdownItem>Item 2</button>
+    <button ngbDropdownItem>Item 3</button>
+  </div>
+</div>  
+<br/>  
+Modal
+<br/>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Modal</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+      Conteúdo Modal
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Salvar</button>
+  </div>
+</ng-template>
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Abrir Modal</button>    
+<br/>  
+Offcanvas
+<br/>
+<ng-template #content let-offcanvas>
+  <div class="offcanvas-header">
+    <h4 class="offcanvas-title" id="offcanvas-basic-title">Offcanvas</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="mb-3">
+      Conteúdo offcanvas
+    </div>
+    <div class="text-end">
+      <button type="button" class="btn btn-outline-dark" (click)="offcanvas.close('Save click')">Save</button>
+    </div>
+  </div>
+</ng-template>
+<button class="btn btn-lg btn-outline-primary" (click)="openOffcanvas(content)">Abrir offcanvas</button>

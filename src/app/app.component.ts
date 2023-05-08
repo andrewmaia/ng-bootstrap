@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +8,12 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class AppComponent {
 	public isCollapsed = false;
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal,private offcanvasService: NgbOffcanvas) {}
 	open(content:any) {
 		this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' });
+	}
+
+  openOffcanvas(content:any) {
+		this.offcanvasService.open(content, { ariaLabelledBy: 'offcanvas-basic-title' });
 	}
 }
