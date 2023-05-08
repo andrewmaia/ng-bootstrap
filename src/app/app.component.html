@@ -95,3 +95,9 @@ Progressbar
 Rating
 <br/>
 <ngb-rating [(rate)]="currentRate"></ngb-rating>
+<br/>  
+Typeahead (Combo por demanda)
+<br/>
+<div style="width:fit-content">
+  <input id="typeahead-basic" type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search" />
+</div>
