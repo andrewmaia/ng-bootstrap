@@ -8,12 +8,15 @@ import { NgbModal, NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
 })
 export class AppComponent {
 	public isCollapsed = false;
-  constructor(private modalService: NgbModal,private offcanvasService: NgbOffcanvas) {}
+	currentRate = 8;
+
+	constructor(private modalService: NgbModal,private offcanvasService: NgbOffcanvas) {}
+
 	open(content:any) {
 		this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' });
 	}
 
-  openOffcanvas(content:any) {
+	openOffcanvas(content:any) {
 		this.offcanvasService.open(content, { ariaLabelledBy: 'offcanvas-basic-title' });
 	}
 }
